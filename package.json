@@ -1,31 +1,25 @@
 {
-	"name": "STAF-Svelte-Components",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
-		"lint": "prettier --plugin-search-dir . --check .",
-		"format": "prettier --plugin-search-dir . --write .",
-		"prepare": "svelte-kit sync"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.20.4",
-		"@tsconfig/svelte": "^5.0.2",
-		"prettier": "^2.8.0",
-		"prettier-plugin-svelte": "^2.10.1",
-		"svelte": "^3.59.2",
-		"svelte-check": "^3.5.1",
-		"typescript": "^5.2.2",
-		"vite": "^4.4.2"
-	},
-	"type": "module",
-	"dependencies": {
-		"@netlifedesign/fmfa-bootstrap-theme": "^2.1.0",
-		"@statsforvalteren/staf-komponentbibliotek-svelte": "^1.1.4"
-	}
+  "name": "staf-svelte-components",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "@tsconfig/svelte": "^5.0.0",
+    "svelte": "^3.59.2",
+    "svelte-check": "^3.4.6",
+    "tslib": "^2.6.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@netlifedesign/fmfa-bootstrap-theme": "^2.1.0",
+    "@statsforvalteren/staf-komponentbibliotek-svelte": "^1.1.4"
+  }
 }

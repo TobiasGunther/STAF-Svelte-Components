@@ -7,13 +7,17 @@ Dette repoet inneholder info rundt oppsett at et nytt Svelte prosjekt som benytt
 
 Sett opp ett nytt Svelte prosjekt, med TypeScript, som vist.
 
-![Alt text](static/setup.png)
+```
+npm create vite@latest <PROJECT NAME> -- --template svelte-ts
+```
+
+![Alt text](src/assets/setup.png)
 
 ## Steg 2:
 
 Endre Svelte versjonen til `^3.59.2` som vist under (STAF komponentene baserer seg på en eldre versjon av Svelte).
 
-![Alt text](static/changeSvelteVersion.png)
+![Alt text](src/assets/changeSvelteVersion.png)
 
 ## Steg 3:
 
@@ -25,35 +29,13 @@ npm install --save svelte @statsforvalteren/staf-komponentbibliotek-svelte
 
 ## Steg 4:
 
-Slik npm-pakken til STAF komponentene er satt opp per dags dato vil de ikke få med noe styling. Derfor må en ekstra bootstrap-theme også installeres.
-Kjør følgende kommando:
+Slik npm-pakken til STAF komponentene er satt opp per dags dato, vil komponentene ikke få med noe styling. Derfor må FMFA's egen bootstrap-theme også installeres. Kjør følgende kommando:
 
 ```
 npm install @netlifedesign/fmfa-bootstrap-theme
 ```
 
-## _Steg 5 (optional):_
-
-Hvis du får masse feilmeldinger i `.svelte` filer installer følgende pakke og konfigurer `svelte.config.ts` som vist.
-
-```
-npm i @sveltejs/adapter-auto
-```
-
-![Alt text](static/svelteConfig.png)
-
-## Steg 6:
-
-Noen av STAF komponentene bruker node_module `@popperjs/core` som sørger for trøbble for å løse problemene relatert til denne modulen endre `vite.config.ts` som vist.
-Dette krever at følgende kommando kjøres først:
-
-```
-npm i @sveltejs/kit/vite
-```
-
-![Alt text](static/viteConfig.png)
-
-## Steg 7:
+## Steg 5:
 
 Legg til en av STAF komponentene inn i prosjektet. Koden under er for en Modal.
 
@@ -87,21 +69,8 @@ Legg til en av STAF komponentene inn i prosjektet. Koden under er for en Modal.
 </div>
 ```
 
-**Husk å inkluder `import '@netlifedesign/fmfa-bootstrap-theme/custom.css'` for å få med styling. Denne importen kan også bare inkluderes i root komponenten hvor den deretter gjelder for alle children.**
-**Husk å import STAF komponenter ved å bruke `@statsforvalteren/staf-komponentbibliotek-svelte`.**
+## Merknader:
 
-## Steg 8:
-
-Kjør applikasjonen ved å kjøre:
-
-```
-npm run dev
-```
-
-## _Steg 9 (optional):_
-
-Hvis du får feilmelding/varsel i terminalen som vist på bildet under endre `tsconfig.json` som vist i det andre bilde.
-
-![Alt text](static/tsconfigWarning.png)
-
-![Alt text](static/tsconfig.png)
+- `import '@netlifedesign/fmfa-bootstrap-theme/custom.css'` må inkluderes for å få med styling. Denne kan også fylles til root komponenten hvor den deretter gjelder for hele applikasjonen
+- Husk å import STAF komponenter ved å bruke `@statsforvalteren/staf-komponentbibliotek-svelte`.
+- I noen komponenter fungerer ikke styling 100%.
