@@ -29,48 +29,8 @@ npm install --save svelte @statsforvalteren/staf-komponentbibliotek-svelte
 
 ## Steg 4:
 
-Slik npm-pakken til STAF komponentene er satt opp per dags dato, vil komponentene ikke få med noe styling. Derfor må FMFA's egen bootstrap-theme også installeres. Kjør følgende kommando:
+Inkluder følgende CSS-fil i root-en av prosjektet, f.eks. i `main.ts` eller `App.svelte`, for å få med styling på alle komponetene:
 
 ```
-npm install @netlifedesign/fmfa-bootstrap-theme
+import "@statsforvalteren/staf-komponentbibliotek-svelte/src/custom.css";
 ```
-
-## Steg 5:
-
-Legg til en av STAF komponentene inn i prosjektet. Koden under er for en Modal.
-
-```
-<script lang="ts">
-	import {
-		Button,
-		Modal,
-		ModalBody,
-		ModalFooter,
-		ModalHeader
-	} from '@statsforvalteren/staf-komponentbibliotek-svelte';
-	let open = false;
-	const toggle = () => (open = !open);
-	import '@netlifedesign/fmfa-bootstrap-theme/custom.css';
-</script>
-
-<div>
-	<Button color="danger" on:click={toggle}>Open Modal</Button>
-	<Modal isOpen={open} {toggle}>
-		<ModalHeader {toggle}>Modal title</ModalHeader>
-		<ModalBody>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua.
-		</ModalBody>
-		<ModalFooter>
-			<Button color="primary" on:click={toggle}>Do Something</Button>
-			<Button color="secondary" on:click={toggle}>Cancel</Button>
-		</ModalFooter>
-	</Modal>
-</div>
-```
-
-## Merknader:
-
-- `import '@netlifedesign/fmfa-bootstrap-theme/custom.css'` må inkluderes for å få med styling. Denne kan også fylles til root komponenten hvor den deretter gjelder for hele applikasjonen
-- Husk å import STAF komponenter ved å bruke `@statsforvalteren/staf-komponentbibliotek-svelte`.
-- I noen komponenter fungerer ikke styling 100%.

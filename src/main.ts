@@ -1,4 +1,4 @@
-import "@netlifedesign/fmfa-bootstrap-theme/custom.css";
+import "@statsforvalteren/staf-komponentbibliotek-svelte/src/custom.css";
 import App from "./App.svelte";
 
 const app = new App({

@@ -134,6 +134,36 @@
         bit lighter and easily wraps to a new line.
       </FormText>
     </FormGroup>
+    <FormGroup>
+      <Input
+        id="r1"
+        type="radio"
+        bind:group={radioGroup}
+        value="eenie"
+        label="Eenie"
+      />
+      <Input
+        id="r2"
+        type="radio"
+        bind:group={radioGroup}
+        value="meanie"
+        label="Meanie"
+      />
+      <Input
+        id="r3"
+        type="radio"
+        bind:group={radioGroup}
+        value="minie"
+        label="Minie"
+      />
+      <Input
+        id="r4"
+        type="radio"
+        bind:group={radioGroup}
+        value="moe"
+        label="Moe"
+      />
+    </FormGroup>
     <CheckBox>
       <CheckBoxItem id="1" name="checkbox1" disabled={false}>Checkbox</CheckBoxItem>
     </CheckBox>

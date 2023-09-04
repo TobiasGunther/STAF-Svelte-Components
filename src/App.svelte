@@ -3,11 +3,12 @@
   import Card from './lib/Card.svelte'
   import Form from './lib/Form.svelte';
   import Alert from './lib/Alert.svelte';
+  import { Container } from '@statsforvalteren/staf-komponentbibliotek-svelte';
 </script>
 
-<main>
+<Container>
     <Modal />
     <Card />
     <Form />
     <Alert />
-</main> 
+</Container> 
